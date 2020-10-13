@@ -1,0 +1,38 @@
+@startuml
+!include ../commons.styles
+
+Component *--Owner
+Type <|..Component
+
+class Owner {
+    -String : name
+    --
+    +setOwner() : String
+    +getOwner() : String
+}
+
+enum Type {
+  File
+  Directory
+}
+
+class Component {
+    -String : name
+    -String : content
+    -double : size
+    --
+    +getName() : String
+    +getContent() : String
+    +getSize() : double
+    +appendContent()
+
+}
+
+class Composite {
+    -Owner owner
+    -List
+
+}
+@enduml
+
+
