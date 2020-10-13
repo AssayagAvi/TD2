@@ -1,0 +1,22 @@
+@startuml
+!include ../commons.styles
+class Forum {
+-name : string
+--
+this(name:string)
+add() : Theme
+}
+
+class Salon {
+name  :string
+this(name:string)
+add() : Theme
+}
+
+class Theme {
+}
+
+class Message {
+}
+
+@enduml
